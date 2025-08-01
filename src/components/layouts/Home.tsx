@@ -36,7 +36,7 @@ export const Home = () => {
                 </CardTitle>
               </CardHeader>
               <CardFooter>
-                <p>Templates</p>
+                <p>Agents</p>
               </CardFooter>
             </Card>
 
@@ -49,7 +49,7 @@ export const Home = () => {
                 </CardTitle>
               </CardHeader>
               <CardFooter>
-                <p>Templates</p>
+                <p>Compabilities</p>
               </CardFooter>
             </Card>
           </div>
