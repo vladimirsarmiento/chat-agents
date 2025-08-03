@@ -1,4 +1,10 @@
-import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardAction,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Activity, Anvil, LayoutGrid, Paperclip, Radio } from "lucide-react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
@@ -6,7 +12,7 @@ import { Button } from "../ui/button";
 export const Home = () => {
   return (
     <>
-      <main className="my-24 px-16 flex flex-col justify-between">
+      <main className="my-4 md:my-24 px-4 sm:px-16 flex flex-col justify-between">
         <section>
           <h1 className="text-2xl font-semibold">Hello Abo!</h1>
           <h1 className="text-2xl font-semibold text-lime-900 opacity-50">
@@ -21,8 +27,9 @@ export const Home = () => {
                     <Activity />
                   </div>
                 </CardTitle>
+                <CardAction className="block md:hidden">Templates</CardAction>
               </CardHeader>
-              <CardFooter>
+              <CardFooter className="hidden md:block">
                 <p>Templates</p>
               </CardFooter>
             </Card>
@@ -34,8 +41,9 @@ export const Home = () => {
                     <Radio />
                   </div>
                 </CardTitle>
+                <CardAction className="block md:hidden">Agents</CardAction>
               </CardHeader>
-              <CardFooter>
+              <CardFooter className="hidden md:block">
                 <p>Agents</p>
               </CardFooter>
             </Card>
@@ -47,8 +55,11 @@ export const Home = () => {
                     <Anvil />
                   </div>
                 </CardTitle>
+                <CardAction className="block md:hidden">
+                  Compabilities
+                </CardAction>
               </CardHeader>
-              <CardFooter>
+              <CardFooter className="hidden md:block">
                 <p>Compabilities</p>
               </CardFooter>
             </Card>
@@ -56,13 +67,13 @@ export const Home = () => {
         </section>
 
         <section>
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col md:flex-row gap-3">
             <Input className="h-12" placeholder="Ask anything from Sagehood" />
-            <Button className="h-12" variant="secondary">
+            <Button className="h-12 flex" variant="secondary">
               <LayoutGrid />
               Explore agents
             </Button>
-            <Button className="h-12" variant="secondary">
+            <Button className="h-12 hidden md:block" variant="secondary">
               <Paperclip />
             </Button>
             <Button className="h-12">Ask</Button>
